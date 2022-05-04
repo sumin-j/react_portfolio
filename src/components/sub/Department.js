@@ -2,9 +2,12 @@ import React from 'react';
 
 function Department() {
   return (
-    <div>
+    <section className="content">
+      <figure></figure>
+      <div className="inner">
         <h1>Department</h1>
-    </div>
+      </div>
+    </section>
   );
 }
 
