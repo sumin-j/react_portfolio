@@ -10,7 +10,13 @@ import Content from './components/main/Content';
 
 //sub
 import Department from './components/sub/Department';
+import Community from './components/sub/Community';
 import Gallery from './components/sub/Gallery';
+import Youtube from './components/sub/Youtube';
+import Location from './components/sub/Location';
+import Join from './components/sub/Join';
+
+
 
 function App() {
 	return (
@@ -25,9 +31,25 @@ function App() {
 			<Route path='/department'>
 				<Department />
 			</Route>
+
+			<Route path='/community'>
+				<Community />
+			</Route>
 			
 			<Route path='/gallery'>
 				<Gallery />
+			</Route>
+
+			<Route path='/youtube'>
+				<Youtube />
+			</Route>
+
+			<Route path='/location'>
+				<Location />
+			</Route>
+
+			<Route path='/join'>
+				<Join />
 			</Route>
 
 			<Footer />
