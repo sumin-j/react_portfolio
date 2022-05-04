@@ -1,6 +1,17 @@
+import {useEffect, useRef} from 'react';
+
 function Layout(props) {
+  const frame = useRef(null);
+
+    useEffect(()=>{
+      //해당 컴포넌트 생성시 (mount)
+      frame.current.classList.remove("on");
+      frame.current.classList.add("on");
+
+      
+    },[])
     return (
-      <section className={'content ${props.name}'}>
+      <section className={'content ${props.name}'} ref={frame}>
         <figure></figure>
         <div className="inner">
           <h1>{props.name}</h1>
