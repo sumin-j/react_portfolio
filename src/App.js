@@ -16,7 +16,7 @@ import Youtube from './components/sub/Youtube';
 import Location from './components/sub/Location';
 import Join from './components/sub/Join';
 
-
+import './scss/style.scss';
 
 function App() {
 	return (
@@ -28,29 +28,18 @@ function App() {
 				<Content />
 			</Route>
 
-			<Route path='/department'>
-				<Department />
-			</Route>
-
-			<Route path='/community'>
-				<Community />
-			</Route>
+			<Route path='/department' component={Department}/>
+				
+			<Route path='/community' component={Community}/>
 			
-			<Route path='/gallery'>
-				<Gallery />
-			</Route>
-
-			<Route path='/youtube'>
-				<Youtube />
-			</Route>
-
-			<Route path='/location'>
-				<Location />
-			</Route>
-
-			<Route path='/join'>
-				<Join />
-			</Route>
+			<Route path='/gallery' component={Gallery}/>
+				
+			<Route path='/youtube' component={Youtube}/>
+				
+			<Route path='/location' component={Location}/>
+				
+			<Route path='/join' component={Join}/>
+				
 
 			<Footer />
 		</>
