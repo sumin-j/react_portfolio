@@ -16,3 +16,19 @@ footer {
         }
     }
 }
+
+//tablet
+@media screen and (max-width: $tablet){
+    footer {
+    
+        .inner {
+            width: 100%;
+    
+        }
+    }
+}
+
+//m.p
+@media screen and (max-width: $mp) {
+
+}
