@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 //common
 import Header from './components/common/Header';
@@ -21,12 +21,18 @@ import './scss/style.scss';
 function App() {
 	return (
 		<>
-			<Header />
+	
+			<Switch>
+				<Route exact path='/'>
+					<Header type={'main'} />
+					<Visual />
+					<Content />
+				</Route>
 
-			<Route exact path='/'>
-				<Visual />
-				<Content />
-			</Route>
+				<Route path='/'>
+					<Header type={'sub'} />
+				</Route>
+			</Switch>
 
 			<Route path='/department' component={Department}/>
 				
@@ -59,4 +65,9 @@ export default App;
 	-초기에 화면에 출력된 모든 정보 데이터를 chunk단위로 모두 불러옴
 	-장점 : 같은 페이지 안에서 서로 다른 컨텐츠를 실시간으로 변경하면서 출력하므로 사용성이 좋음
 	-단점 : 초기 로딩속도가 느림, 검색엔진 비최적화
+*/
+
+/*
+	Switch 
+	라우터 연결시 중복되는 url이 있을때 더 구체적인 라우터 하나만 적용
 */
